@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Playpen+Sans+Thai:wght@100..800&display=swap');
+@import "tailwindcss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+div#root {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --color-marron-oscuro: #5C2B11;      
+  --color-marron-claro:  #A64B16;       
+  --color-mostaza:       #F9A825;        
+  --color-dorado:        #FBC02D;        
+  --color-beige:         #FFF3E0;        
+  --color-blanco:        #FFFFFF;       
+  --celeste-bandera: #BAE6FD;
+  --blanco: #FFFFFF;
+  --font-principal: 'Playpen Sans Thai', sans-serif;
+  --font-secundaria: 'Montserrat', sans-serif;
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  font-family: "Playpen Sans Thai", cursive;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  color: var(--color-marron-oscuro);
+}
+
+/* ESTILOS DE LA PAGINA */
+
+/* IMAGEN LOGO */
+img.logo:hover {
+  transform: scale(1.2, 1.2);
+  transition: transform 0.5s ease-in-out;
+}
+
+/* NAVBAR */
+a {
+  font-size: 1em;
+  font-family: var(--font-secundaria);
+  color: var(--color-marron-claro);
+  font-weight: bold;
+}
+
+.isActive {
+  color: #5C2B11;
+  transform: scale(1.2, 1.2);
+  font-style: italic;
+}
+
+.isNotActive {
+  color: var(--color-marron-claro);
+}
+
+.isNotActive:hover {
+  color: #5C2B11;
+  transform: scale(1.2, 1.2);
+  font-style: italic;
+  transition: all 0.3s ease;
+}
+
+.cart {
+  position: absolute;
+}
+
+.cart__number-items {
+  position: relative;
+  top: -18px;
+  left: 35px;
+  font-size: 0.8em;
+  font-weight: bold;
+  z-index: 1000;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.cart:hover  {
+  transform: scale(1.2, 1.2);
+  transition: all 0.3s ease;
+}
+
+/* NAVBAR */
+
+
