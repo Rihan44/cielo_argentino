@@ -52,6 +52,10 @@ h2 {
   font-size: 2.7em;
 }
 
+p {
+  font-family: var(--font-secundaria);
+}
+
 /* IMAGEN LOGO */
 img.logo:hover {
   transform: scale(1.2, 1.2);
