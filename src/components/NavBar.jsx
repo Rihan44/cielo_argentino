@@ -19,7 +19,7 @@ export default function NavBar() {
           {/* Logo + Navegación */}
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <NavLink to='/'>
-            <img src={logo} className='logo' style={{ width: '80px', height: '80px', marginRight: '1rem', objectFit: 'contain' }} />
+            <img src={logo} className='logo' style={{ width: '80px', height: '80px', marginRight: '1.8rem', objectFit: 'contain' }} />
           </NavLink>
             <Box sx={{ display: 'flex', marginLeft: '1.9em', justifyContent:'space-between', width: '100%' }}>
               <NavLink className={({ isActive }) =>
@@ -39,12 +39,10 @@ export default function NavBar() {
               </NavLink>
             </Box>
           </Box>
-
-          {/* Ícono de carrito */}
-         { cartNumberItems.length !== 0 && <IconButton className='cart' edge="end" sx={{marginRight: '0.3em', color: 'var(--color-marron-claro)'}}>
-             <div className='cart__number-items'>{cartNumberItems.length}</div>
+         <IconButton className='cart' edge="end" sx={{marginRight: '0.3em', color: 'var(--color-marron-claro)'}}>
+            { cartNumberItems.length !== 0 &&  <div className='cart__number-items'>{cartNumberItems.length}</div>}
             <ShoppingCartIcon />
-          </IconButton>}
+          </IconButton>
 
         </Toolbar>
       </AppBar>
