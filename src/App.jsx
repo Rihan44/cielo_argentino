@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-router-dom';
 import NavBar from './components/NavBar.jsx'
 import Home from './pages/Home.jsx'
 import Carta from './pages/Carta.jsx'
@@ -15,14 +15,13 @@ function App() {
           <Link to="/nosotros" className="text-blue-800 font-semibold hover:text-yellow-600">Nosotros</Link>
           <Link to="/contacto" className="text-blue-800 font-semibold hover:text-yellow-600">Contacto</Link>
         </nav> */}
-        <div className="h-[80px]" />
+        <div className="h-[70px]" />
 
         {/* Contenido de la ruta actual */}
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/carta" element={<Carta />} />
-          {/* <Route path="/oferta" element={<Nosotros />} />
-          <Route path="/contacto" element={<Contacto />} /> */}
+          <Route path="*" element={<Navigate to="/" />} />
         </Routes>
       </div>
     </Router>

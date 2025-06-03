@@ -5,7 +5,11 @@ export default {
     './src/**/*.{js,ts,jsx,tsx}',
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        california: ['California Vibes', 'sans-serif'],
+      },
+    },
   },
   plugins: [],
 };

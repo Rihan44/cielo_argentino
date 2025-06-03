@@ -5,6 +5,13 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+  font-family: 'California Vibes';
+  src: url('./assets/fonts/California_Vibes.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -27,12 +34,13 @@ div#root {
   --color-blanco:        #FFFFFF;       
   --celeste-bandera: #BAE6FD;
   --blanco: #FFFFFF;
-  --font-principal: 'Playpen Sans Thai', sans-serif;
+  /* --font-principal: 'Playpen Sans Thai', sans-serif; */
+  --font-principal: 'California Vibes', cursive;
   --font-secundaria: 'Montserrat', sans-serif;
   
   font-synthesis: none;
   text-rendering: optimizeLegibility;
-  font-family: "Playpen Sans Thai", cursive;
+  font-family: var(--font-principal);
   font-optical-sizing: auto;
   font-weight: 300;
   font-style: normal;
@@ -40,6 +48,9 @@ div#root {
 }
 
 /* ESTILOS DE LA PAGINA */
+h2 {
+  font-size: 2.7em;
+}
 
 /* IMAGEN LOGO */
 img.logo:hover {
@@ -86,10 +97,10 @@ a {
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.cart:hover  {
+/* .cart:hover  {
   transform: scale(1.2, 1.2);
   transition: all 0.3s ease;
-}
+} */
 
 /* NAVBAR */
 
