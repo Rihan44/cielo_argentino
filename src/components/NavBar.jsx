@@ -34,7 +34,7 @@ export default function NavBar() {
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
           <Box sx={{ display: 'flex', alignItems: 'center' }}>
           <NavLink to='/'>
-            <img src={logo} className='logo' style={{ width: '80px', height: '80px', marginRight: '1.8rem', objectFit: 'contain' }} />
+            <img src={logo} className='logo' style={{ width: '80px', height: '80px', marginRight: '2rem', objectFit: 'contain' }} />
           </NavLink>
             <Box sx={{ display: 'flex', marginLeft: '1.9em', justifyContent:'space-between', width: '100%' }}>
               <NavLink className={({ isActive }) =>
@@ -110,7 +110,7 @@ export default function NavBar() {
             transformOrigin={{ horizontal: 'right', vertical: 'top' }}
             anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
           >
-            <div className='flex justify-center text-3xl w-full' style={{paddingBottom: '1em'}}>
+            <div className='flex justify-center text-3xl w-full' style={{paddingBottom: '0.7em'}}>
               Productos
             </div>
             <Divider />
