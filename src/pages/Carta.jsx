@@ -8,7 +8,7 @@ export default function Carta() {
 
   return (
     <div className="w-full" style={{paddingBottom: '1.5em'}}>
-      <h2 className="text-center text-5xl font-bold" style={{margin: '0 0 0.5em 0'}}>Nuestra Carta</h2>
+      <h2 className="text-center text-5xl font-bold" style={{margin: '0.5em 0 0.5em 0'}}>Nuestra Carta</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" style={{margin: '0 auto', width: '90%'}}>
         {carta.map((item) => (
           <div key={item.id} className="bg-white rounded-xl shadow-md flex flex-col items-center" style={{padding: '1em'}}>

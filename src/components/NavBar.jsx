@@ -110,7 +110,7 @@ export default function NavBar() {
             transformOrigin={{ horizontal: 'right', vertical: 'top' }}
             anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
           >
-            <div className='flex justify-center text-3xl w-full' style={{paddingBottom: '0.4em'}}>
+            <div className='flex justify-center text-3xl w-full' style={{paddingBottom: '0.1em'}}>
               Productos
             </div>
             <Divider />
