@@ -110,7 +110,7 @@ export default function NavBar() {
             transformOrigin={{ horizontal: 'right', vertical: 'top' }}
             anchorOrigin={{ horizontal: 'right', vertical: 'bottom' }}
           >
-            <div className='flex justify-center text-3xl w-full' style={{paddingBottom: '0.7em'}}>
+            <div className='flex justify-center text-3xl w-full' style={{paddingBottom: '0.4em'}}>
               Productos
             </div>
             <Divider />
@@ -122,7 +122,7 @@ export default function NavBar() {
               </ul>
             </MenuItem>
             <Divider />
-            <MenuItem sx={{display: 'flex', justifyContent: 'end', fontWeight: 'bold'}}>
+            <MenuItem sx={{display: 'flex', justifyContent: 'end', fontWeight: 'bold', paddingTop: '0'}}>
               Total: 0
             </MenuItem>
             <Link to='/carrito' onClick={handleClose} style={{padding: '0 1em 0 1em'}}>
