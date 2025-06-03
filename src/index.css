@@ -108,4 +108,19 @@ a {
 
 /* NAVBAR */
 
+/* SIGUENOS0 */
+div.redes a{
+  color: var(--color-marron-oscuro);
+}
+
+/* FOOTER */
+footer {
+  width: 100%;
+  padding: 10px;
+  color: var(--color-blanco);
+  font-family: var(--font-secundaria);
+  background-color: var(--color-marron-oscuro);
+  font-size: 0.7em;
+}
+
 
