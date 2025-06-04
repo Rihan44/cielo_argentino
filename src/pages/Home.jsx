@@ -20,10 +20,10 @@ export default function Home() {
 
   return (
     <div className="text-center">
-      <h2 className="font-bold w-full" style={{marginTop: '0.5em', marginBottom: '0.5em'}}>
+      <h2 className="font-bold w-full" style={{marginTop: '0.5em'}}>
         Bienvenido a Cielo Argentino
       </h2>
-      <p style={{marginTop: '1.5em', width: '90%', margin: '1.5em auto'}}>
+      <p style={{marginTop: '1.5em', marginBottom: '0.5em', width: '90%', margin: '1.5em auto'}}>
         En <i>Cielo Argentino</i> traemos a España el auténtico sabor de nuestra tierra. Elaboramos comida argentina casera con ingredientes de calidad y recetas tradicionales: empanadas, milanesas, alfajores, facturas, dulce de leche y mucho más.
         Ya sea que extrañes los sabores de casa o quieras descubrir lo mejor de nuestra cocina, aquí encontrarás un pedacito de Argentina, hecho con amor.
       </p>
