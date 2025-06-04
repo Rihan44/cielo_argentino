@@ -10,7 +10,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 
 export default function Home() {
-  const images = ['/public/images/empanadas1.jpg', '/public/images/facturas.jpg', '/public/images/alfajores.jpg', '/public/images/pasta_frola.jpg', '/public/images/pepas.jpg'];
+  const images = ['/images/empanadas1.jpg', '/images/facturas.jpg', '/images/alfajores.jpg', '/images/pasta_frola.jpg', '/images/pepas.jpg'];
 
   return (
     <div className="text-center">

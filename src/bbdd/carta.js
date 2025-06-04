@@ -6,7 +6,7 @@ const carta = [
     nombre: "Empanada de Carne",
     descripcion: "Empanada tradicional con carne picada, cebolla, huevo y especias.",
     precio: 2.5,
-    imagen: "/public/images/empanadas1.jpg",
+    imagen: "/images/empanadas1.jpg",
     categoria: "salado",
     type: 2
   },
