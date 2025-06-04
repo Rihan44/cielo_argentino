@@ -5,7 +5,8 @@ const carta = [
     id: 1,
     nombre: "Empanada de Carne",
     descripcion: "Empanada tradicional con carne picada, cebolla, huevo y especias.",
-    precio: 2.5,
+    precioMedia: 8,
+    precioDocena: 16,
     imagen: "/images/empanadas1.jpg",
     categoria: "salado",
     type: 2
@@ -41,7 +42,8 @@ const carta = [
     id: 6,
     nombre: "Alfajor de Maicena",
     descripcion: "Clásico alfajor con dulce de leche y coco rallado.",
-    precio: 1.5,
+    precioMedia: 6,
+    precioDocena: 12,
     imagen: "/images/alfajores.jpg",
     categoria: "dulce",
     type: 2
@@ -50,7 +52,8 @@ const carta = [
     id: 7,
     nombre: "Facturas",
     descripcion: "Facturas de crema con dulce de leche o membrillo, se pueden pedir variadas o de un solo tipo",
-    precio: 4.0,
+    precioMedia: 6,
+    precioDocena: 12,
     imagen: "/images/facturas.jpg",
     categoria: "dulce",
     type: 2
@@ -68,7 +71,8 @@ const carta = [
     id: 9,
     nombre: "Pepas",
     descripcion: "Pastas tipicias argentinas, pueden ser de membrillo o de dulce de batata",
-    precio: 2.0,
+    precioMedia: 6,
+    precioDocena: 12,
     imagen: "/images/pepas.jpg",
     categoria: "dulce",
     type: 2

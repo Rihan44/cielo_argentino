@@ -23,16 +23,38 @@ export default function Carta() {
               style={{objectFit:'containt', borderRadius: '10px 10px 0 0'}}
             />
             <div className="flex flex-col items-center" style={{padding: '1em'}}>
-              <h3 className="text-xl font-semibold">{item.nombre}</h3>
+              <h3 className="text-xl font-semibold" style={{margin: '0 0 0.5em 0'}}>{item.nombre}</h3>
               <p className="text-gray-600 text-sm text-center">{item.descripcion}</p>
-              <p className="text-lg font-bold">${item.precio.toFixed(2)}</p>
+              {
+                item.type === 1 ?
+                 <div>
+                  <p className="text-lg font-bold">${item?.precio?.toFixed(2)}</p>
+                 </div>
+                 : <div className="flex w-[75%] justify-between" style={{marginTop: '1em'}}>
+                    <p className="text-lg font-bold">${item?.precioMedia?.toFixed(2)}</p>
+                    <p className="text-lg font-bold">${item?.precioDocena?.toFixed(2)}</p>
+                  </div>
+              }
+              
               {
                item.type === 2 ? <div className="flex justify-between">
-                  <Button sx={{width: '45%'}} variant="contained" style={{backgroundColor: 'var(--color-marron-oscuro)', marginTop: '1em'}} onClick={() => dispatch(addToCart(item))}>Añadir media docena</Button>
-                  <Button sx={{width: '45%'}} variant="contained" style={{backgroundColor: 'var(--color-marron-oscuro)', marginTop: '1em'}} onClick={() => dispatch(addToCart(item))}>Añadir docena</Button>
+                  <Button sx={{width: '45%'}} variant="contained" style={{backgroundColor: 'var(--color-marron-oscuro)', marginTop: '1em'}} onClick={() => dispatch(addToCart({
+                    id: item.id + item.type,
+                    nombre: item.nombre,
+                    precio: item.precioMedia
+                  }))}>Añadir media docena</Button>
+                  <Button sx={{width: '45%'}} variant="contained" style={{backgroundColor: 'var(--color-marron-oscuro)', marginTop: '1em'}} onClick={() => dispatch(addToCart({
+                    id: item.id,
+                    nombre: item.nombre,
+                    precio: item.precioDocena
+                  }))}>Añadir docena</Button>
                 </div>
                 :<div>
-                  <Button variant="contained" style={{backgroundColor: 'var(--color-marron-oscuro)', marginTop: '1em'}} onClick={() => dispatch(addToCart(item))}>Añadir al carrito</Button>
+                  <Button variant="contained" style={{backgroundColor: 'var(--color-marron-oscuro)', marginTop: '1em'}} onClick={() => dispatch(addToCart({
+                    id: item.id,
+                    nombre: item.nombre,
+                    precio: item.precio
+                  }))}>Añadir al carrito</Button>
                 </div>
               }
             </div>

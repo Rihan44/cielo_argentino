@@ -13,7 +13,7 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 
 import { Link, NavLink   } from 'react-router-dom';
 import { useSelector } from 'react-redux';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 export default function NavBar() {
  const [anchorEl, setAnchorEl] = useState(null);
@@ -27,6 +27,10 @@ export default function NavBar() {
   };
 
   const cartItems = useSelector(((state) => state.cart.items));
+
+  useEffect(() => {
+    console.log(cartItems)
+  }, [cartItems])
 
   return (
     <Box sx={{ flexGrow: 1, marginBottom: '1.5em'}}>
@@ -115,12 +119,20 @@ export default function NavBar() {
             </div>
             <Divider />
             {/* TODO AQUI PONER UN NO HAY PRODUCTOS AÚN */}
+            {
+              cartItems.length === 0 ? <p style={{padding: '1em'}}>No hay productos aún...</p>
+              : <MenuItem>
+                  <ul>
+                  {
+                    cartItems.map((item) => (
+                        <li key={item.id + item.quantity}>{item.quantity} - {item.nombre} - {item.precio}</li>
+                    ))
+                  }
+                  </ul>
+                </MenuItem>
+            }
             {/* TODO CUANDO ESTE EN LA RUTA DEL CARRITO QUE NO SE PUEDA HACER CLICK */}
-            <MenuItem>
-              <ul>
-                <li style={{listStyle: 'circle', marginLeft: '1em'}}>Prueba - 1 +</li>
-              </ul>
-            </MenuItem>
+            
             <Divider />
             <MenuItem sx={{display: 'flex', justifyContent: 'end', fontWeight: 'bold', paddingTop: '0'}}>
               Total: 0
