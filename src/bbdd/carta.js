@@ -6,24 +6,27 @@ const carta = [
     nombre: "Empanada de Carne",
     descripcion: "Empanada tradicional con carne picada, cebolla, huevo y especias.",
     precio: 2.5,
-    imagen: "/images/empanada-carne.jpg",
-    categoria: "Salado"
+    imagen: "/public/images/empanadas1.jpg",
+    categoria: "salado",
+    type: 2
   },
   {
     id: 2,
-    nombre: "Milanesa a la Napolitana",
-    descripcion: "Milanesa de carne con salsa de tomate, jamón y queso gratinado.",
+    nombre: "Pasta casera",
+    descripcion: "Pasta casera de cualquier tipo con la salsa que tu quieras",
     precio: 9.5,
-    imagen: "/images/milanesa-napolitana.jpg",
-    categoria: "Salado"
+    imagen: "/images/pasta.jpg",
+    categoria: "salado",
+    type: 1
   },
   {
     id: 3,
-    nombre: "Choripán",
-    descripcion: "Chorizo criollo a la parrilla en pan, con chimichurri o salsa criolla.",
+    nombre: "Milanesa de pollo o ternera",
+    descripcion: "Milanesas de pollo o ternera, se puede elegir a la napolitana pero lleva un cargo de 0,50 centimos",
     precio: 5.0,
-    imagen: "/images/choripan.jpg",
-    categoria: "Salado"
+    imagen: "/images/milanesa.jpg",
+    categoria: "salado",
+    type: 1
   },
   {
     id: 4,
@@ -31,39 +34,44 @@ const carta = [
     descripcion: "Guiso criollo con maíz, zapallo, porotos, chorizo y carne de cerdo.",
     precio: 8.0,
     imagen: "/images/locro.jpg",
-    categoria: "Salado"
-  },
-  {
-    id: 5,
-    nombre: "Dulce de Leche Pancake",
-    descripcion: "Panqueque relleno con dulce de leche artesanal.",
-    precio: 3.5,
-    imagen: "/images/panqueque-dulce-de-leche.jpg",
-    categoria: "Dulce"
+    categoria: "salado",
+    type: 1
   },
   {
     id: 6,
     nombre: "Alfajor de Maicena",
     descripcion: "Clásico alfajor con dulce de leche y coco rallado.",
     precio: 1.5,
-    imagen: "/images/alfajor-maicena.jpg",
-    categoria: "Dulce"
+    imagen: "/images/alfajores.jpg",
+    categoria: "dulce",
+    type: 2
   },
   {
     id: 7,
-    nombre: "Chocotorta",
-    descripcion: "Tarta fría con galletitas de chocolate, dulce de leche y queso crema.",
+    nombre: "Facturas",
+    descripcion: "Facturas de crema con dulce de leche o membrillo, se pueden pedir variadas o de un solo tipo",
     precio: 4.0,
-    imagen: "/images/chocotorta.jpg",
-    categoria: "Dulce"
+    imagen: "/images/facturas.jpg",
+    categoria: "dulce",
+    type: 2
   },
   {
     id: 8,
-    nombre: "Facturas Variadas",
-    descripcion: "Masa dulce con rellenos como dulce de leche, crema pastelera o membrillo.",
+    nombre: "Pasta frola",
+    descripcion: "Pastel de membrillo o dulce de batata, también se puede hacer mitad y mitad",
     precio: 2.0,
-    imagen: "/images/facturas.jpg",
-    categoria: "Dulce"
+    imagen: "/images/pasta_frola.jpg",
+    categoria: "dulce",
+    type: 1
+  },
+  {
+    id: 9,
+    nombre: "Pepas",
+    descripcion: "Pastas tipicias argentinas, pueden ser de membrillo o de dulce de batata",
+    precio: 2.0,
+    imagen: "/images/pepas.jpg",
+    categoria: "dulce",
+    type: 2
   }
 ];
 

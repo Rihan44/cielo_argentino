@@ -6,24 +6,18 @@ import { AiFillTikTok } from "react-icons/ai";
 import { FaSquareWhatsapp } from "react-icons/fa6";
 import { CgMail } from "react-icons/cg";
 
-import image1 from '../assets/images/pepas.jpg';
-import image2 from '../assets/images/alfajores.jpg';
-import image3 from '../assets/images/empanadas1.jpg';
-import image4 from '../assets/images/facturas.jpg';
-import image5 from '../assets/images/pasta_frola.jpg';
-
 import 'swiper/css';
 import 'swiper/css/pagination';
 
 export default function Home() {
-  const images = [image1, image2, image3, image4, image5];
+  const images = ['/public/images/empanadas1.jpg', '/public/images/facturas.jpg', '/public/images/alfajores.jpg', '/public/images/pasta_frola.jpg', '/public/images/pepas.jpg'];
 
   return (
     <div className="text-center">
       <h2 className="font-bold w-full" style={{marginTop: '0.5em'}}>
         Bienvenido a Cielo Argentino
       </h2>
-      <p style={{width: '90%', margin: '1.5em auto', marginBottom: '2em', marginTop: '1.5em'}}>
+      <p style={{width: '90%', margin: '1.5em auto', marginBottom: '2.3em', marginTop: '1.5em'}}>
         En <i>Cielo Argentino</i> traemos a España el auténtico sabor de nuestra tierra. Elaboramos comida argentina casera con ingredientes de calidad y recetas tradicionales: empanadas, milanesas, alfajores, facturas, dulce de leche y mucho más.
         Ya sea que extrañes los sabores de casa o quieras descubrir lo mejor de nuestra cocina, aquí encontrarás un pedacito de Argentina, hecho con amor.
       </p>
