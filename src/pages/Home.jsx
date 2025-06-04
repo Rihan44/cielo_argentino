@@ -11,7 +11,6 @@ import image2 from '../assets/images/alfajores.jpg';
 import image3 from '../assets/images/empanadas1.jpg';
 import image4 from '../assets/images/facturas.jpg';
 import image5 from '../assets/images/pasta_frola.jpg';
-import flag from '../assets/images/flag.png';
 
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -21,7 +20,7 @@ export default function Home() {
 
   return (
     <div className="text-center">
-      <h2 className="font-bold w-full" style={{marginTop: '0.5em'}}>
+      <h2 className="font-bold w-full" style={{marginTop: '0.5em', marginBottom: '0.5em'}}>
         Bienvenido a Cielo Argentino
       </h2>
       <p style={{marginTop: '1.5em', width: '90%', margin: '1.5em auto'}}>
@@ -88,12 +87,6 @@ export default function Home() {
           </a>
         </div>
       </div>
-      <footer className='footer'>
-        <p style={{marginBottom: '1em'}}>
-          De momento solo hacemos envíos y repartos a Puertollano, Ciudad Real y alrededores. 
-        </p>
-        <img src={flag} style={{margin:'auto'}}/>
-      </footer>
     </div>
   );
 }

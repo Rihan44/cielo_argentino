@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes, Route, Link, Navigate } from 'react-ro
 import NavBar from './components/NavBar.jsx'
 import Home from './pages/Home.jsx'
 import Carta from './pages/Carta.jsx'
+import Footer from './components/Footer.jsx';
 
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/carta" element={<Carta />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
+        <Footer/>
       </div>
     </Router>
   );
