@@ -1,4 +1,5 @@
 
+import flag from '../assets/flag.png';
 
 export default function Footer(){
    return (
@@ -6,7 +7,7 @@ export default function Footer(){
          <p className='text-center' style={{marginBottom: '1em'}}>
             De momento solo hacemos envíos y repartos a Puertollano, Ciudad Real y alrededores. 
          </p>
-         <img src='/public/images/flag.png' style={{margin:'auto'}}/>
+         <img src={flag} style={{margin:'auto'}}/>
       </footer>
    )
 }
