@@ -3,7 +3,7 @@
 const carta = [
   {
     id: 1,
-    nombre: "Empanada de Carne",
+    nombre: "Empanadas de Carne",
     descripcion: "Empanada tradicional con carne picada, cebolla, huevo y especias.",
     precioMedia: 8,
     precioDocena: 16,

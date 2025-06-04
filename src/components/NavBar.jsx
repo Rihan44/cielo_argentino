@@ -10,13 +10,18 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Divider from '@mui/material/Divider';
 import ListItemIcon from '@mui/material/ListItemIcon';
+import { IoMdAdd } from "react-icons/io";
+import { FiMinus } from "react-icons/fi";
 
 import { Link, NavLink   } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useEffect, useState } from 'react';
+import { addToCart, minusItem } from "../store/cart";
 
 export default function NavBar() {
  const [anchorEl, setAnchorEl] = useState(null);
+  const dispatch = useDispatch();
+
   const open = Boolean(anchorEl);
 
   const handleClick = (event) => {
@@ -27,6 +32,7 @@ export default function NavBar() {
   };
 
   const cartItems = useSelector(((state) => state.cart.items));
+  const totalCartPrice = cartItems.reduce((acc, item) => acc + item.quantity * item.precio, 0);
 
   useEffect(() => {
     console.log(cartItems)
@@ -118,14 +124,29 @@ export default function NavBar() {
               Productos
             </div>
             <Divider />
-            {/* TODO AQUI PONER UN NO HAY PRODUCTOS AÚN */}
             {
               cartItems.length === 0 ? <p style={{padding: '1em'}}>No hay productos aún...</p>
               : <MenuItem>
                   <ul>
                   {
                     cartItems.map((item) => (
-                        <li key={item.id + item.quantity}>{item.quantity} - {item.nombre} - {item.precio}</li>
+                        <li key={item.id + item.quantity}>
+                          <div className='flex flex-col' style={{marginTop:'0.8em'}}>
+                            <div className='flex w-full justify-between'>
+                              <p style={{textDecoration: 'underline', fontWeight: 'bold'}}>{item.nombre}</p>
+                              {/* TODO PENDIENTE HACER ESTO MEJOR */}
+                              <p style={{marginLeft: '1em'}}>{ '-' + '  ' + item.precio * item.quantity}€</p>
+                            </div>
+                            <div className='flex' style={{alignSelf: 'end', alignItems: 'center', marginTop: '0.5em', backgroundColor: 'var(--color-dorado)', borderRadius: '5px', padding: '2px 8px'}}>
+                            {/* TOPDO HACER UN METODO QUE CUANDO AÑADE O QUITE SE AÑADA O QUITE DEL CARRITO */}
+                              <FiMinus onClick={(e) => { e.stopPropagation();  dispatch(minusItem(item))}} color='var(--color-marron-oscuro)'/>
+                              <p style={{margin: '0 0.5em 0 0.5em'}}>
+                                {item.quantity}
+                              </p>
+                              <IoMdAdd onClick={(e) => { e.stopPropagation();  dispatch(addToCart(item))}} color='var(--color-marron-oscuro)'/>
+                            </div>
+                          </div>
+                        </li>
                     ))
                   }
                   </ul>
@@ -135,11 +156,13 @@ export default function NavBar() {
             
             <Divider />
             <MenuItem sx={{display: 'flex', justifyContent: 'end', fontWeight: 'bold', paddingTop: '0'}}>
-              Total: 0
+              Total: {totalCartPrice}€
             </MenuItem>
-            <Link to='/carrito' onClick={handleClose} style={{padding: '0 1em 0 1em'}}>
-              <Button variant="contained" style={{backgroundColor: 'var(--color-marron-oscuro)'}}>Ver carrito</Button>
-            </Link>
+            <div className='w-full text-center' style={{padding: '0 0.5em 0.5em 0.5em'}}>
+              <Link  to='/carrito' onClick={handleClose}>
+                <Button variant="contained" style={{backgroundColor: 'var(--color-marron-oscuro)'}}>Ver carrito</Button>
+              </Link>
+            </div>
           </Menu>
         </Toolbar>
       </AppBar>

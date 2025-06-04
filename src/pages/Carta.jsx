@@ -27,7 +27,7 @@ export default function Carta() {
               <p className="text-gray-600 text-sm text-center">{item.descripcion}</p>
               {
                 item.type === 1 ?
-                 <div>
+                 <div style={{marginTop: '1em'}}>
                   <p className="text-lg font-bold">${item?.precio?.toFixed(2)}</p>
                  </div>
                  : <div className="flex w-[75%] justify-between" style={{marginTop: '1em'}}>
@@ -40,12 +40,12 @@ export default function Carta() {
                item.type === 2 ? <div className="flex justify-between">
                   <Button sx={{width: '45%'}} variant="contained" style={{backgroundColor: 'var(--color-marron-oscuro)', marginTop: '1em'}} onClick={() => dispatch(addToCart({
                     id: item.id + item.type,
-                    nombre: item.nombre,
+                    nombre: item.nombre + ' ' + '(media)',
                     precio: item.precioMedia
                   }))}>Añadir media docena</Button>
                   <Button sx={{width: '45%'}} variant="contained" style={{backgroundColor: 'var(--color-marron-oscuro)', marginTop: '1em'}} onClick={() => dispatch(addToCart({
                     id: item.id,
-                    nombre: item.nombre,
+                    nombre: item.nombre + ' ' + '(docena)',
                     precio: item.precioDocena
                   }))}>Añadir docena</Button>
                 </div>
@@ -66,7 +66,7 @@ export default function Carta() {
 
   return (
     <div className="w-full" style={{paddingBottom: '2.5em'}}>
-      <h2 className="text-center text-5xl font-bold">Nuestra Carta</h2>
+      <h2 className="text-center text-5xl font-bold" style={{marginTop: '0.5em'}}>Nuestra Carta</h2>
       {renderGrupo("Salado", salados)}
       {renderGrupo("Dulce", dulces)}
     </div>
