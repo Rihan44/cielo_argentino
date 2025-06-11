@@ -70,11 +70,11 @@ export default function Carta() {
                 {
                   item.type === 1 ?
                   <div style={{marginTop: '1em'}}>
-                    <p className="text-lg font-bold">${item?.precio?.toFixed(2)}</p>
+                    <p className="text-lg font-bold">€{item?.precio?.toFixed(2)}</p>
                   </div>
                   : <div className="flex w-[75%] justify-between" style={{marginTop: '1em'}}>
-                      <p className="text-lg font-bold">${item?.precioMedia?.toFixed(2)}</p>
-                      <p className="text-lg font-bold">${item?.precioDocena?.toFixed(2)}</p>
+                      <p className="text-lg font-bold">€{item?.precioMedia?.toFixed(2)}</p>
+                      <p className="text-lg font-bold">€{item?.precioDocena?.toFixed(2)}</p>
                     </div>
                 }
                 
@@ -103,6 +103,7 @@ export default function Carta() {
             </div>
             ) : (
               <div key={item.id} className="bg-white rounded-xl shadow-md flex flex-col items-center" style={{marginBottom: '0.5em'}}>
+              {/* TODO ESTO METERLO EN UN COMPONENTE  PARA INCLUIR LAS EMPANADAS TAMBIÉN*/}
                   {
                     pastaImage && pastaImage !== '' 
                     ? <img
@@ -126,7 +127,7 @@ export default function Carta() {
                           <div className="relative h-50 w-full overflow-hidden shadow-lg">
                             <img
                               src={src}
-                              alt={`Slide ${index}`}
+                              alt={`Slide €{index}`}
                               className="w-full h-full object-cover"
                             />
                           </div>
@@ -188,14 +189,14 @@ export default function Carta() {
                         </Select>
                       </FormControl>
                       <div style={{marginTop: '1em'}}>
-                        <p className="text-lg font-bold">{pasta.precio} <i className="text-base">{salsa.precio && '+' + ' ' + salsa.precio}</i> $</p>
+                        <p className="text-lg font-bold">{pasta.precio} <i className="text-base">{salsa.precio && '+' + ' ' + salsa.precio}</i> €</p>
                       </div>
                     </div>
                   }
                   <div>
                     <Button disabled={pasta === ''} variant="contained" style={{backgroundColor: 'var(--color-marron-oscuro)', marginTop: '1em'}} onClick={() => dispatch(addToCart({
                       id: salsa.nombre ? item.id  + pasta.nombre + salsa.nombre : item.id + pasta.nombre,
-                      nombre: salsa.nombre ? `Pasta ${pasta.nombre} con ${salsa.nombre} ` : 'Pasta ' + pasta.nombre,
+                      nombre: salsa.nombre ? `Pasta €{pasta.nombre} con €{salsa.nombre} ` : 'Pasta ' + pasta.nombre,
                       precio: salsa.precio ? pasta.precio + salsa.precio : pasta.precio
                     }))}>Añadir al carrito</Button>
                   </div>

@@ -38,6 +38,8 @@ export default function NavBar() {
     console.log(cartItems)
   }, [cartItems])
 
+  // TODO RECOGER LA URL Y SI ES /CARRITO NO MOSTRAR EL CARRITO
+
   return (
     <Box sx={{ flexGrow: 1, marginBottom: '1.5em'}}>
       <AppBar position="fixed" sx={{ backgroundColor: '#FFFFFF', boxShadow: '0px 2px 4px rgba(0, 0, 0, 0.1)'}}>
@@ -87,7 +89,6 @@ export default function NavBar() {
             id="account-menu"
             open={open}
             onClose={handleClose}
-            onClick={handleClose}
             slotProps={{
               paper: {
                 width: '500px',
@@ -160,7 +161,7 @@ export default function NavBar() {
               Total: {totalCartPrice}€
             </MenuItem>
             <div className='w-full text-center' style={{padding: '0 0.5em 0.5em 0.5em'}}>
-              <Link  to='/carrito' onClick={handleClose}>
+              <Link to='/carrito' onClick={handleClose}>
                 <Button variant="contained" style={{backgroundColor: 'var(--color-marron-oscuro)'}}>Ver carrito</Button>
               </Link>
             </div>
