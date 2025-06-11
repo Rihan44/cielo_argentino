@@ -4,6 +4,7 @@ import Home from './pages/Home.jsx'
 import Carta from './pages/Carta.jsx'
 import Footer from './components/Footer.jsx';
 import Carrito from './pages/Carrito.jsx';
+import MiPerfil from './pages/MiPerfil.jsx';
 
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/carta" element={<Carta />} />
           <Route path="/carrito" element={<Carrito />} />
+          <Route path="/mi_perfil" element={<MiPerfil />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer/>

@@ -63,7 +63,7 @@ export default function NavBar() {
               <NavLink className={({ isActive }) =>
                 isActive ? 'isActive' : 'isNotActive'
               } to='/mi_perfil'>
-              Mi perfíl
+              Mi perfil
               </NavLink>
             </Box>
           </Box>
@@ -133,7 +133,6 @@ export default function NavBar() {
                     {cartItems.map((item) => (
                       <li key={item.id + item.quantity}>
                         <div className="flex flex-col" style={{ marginTop: '0.8em' }}>
-                          {/* Grid para el nombre y el precio */}
                           <div
                             className="grid grid-cols-[1fr_auto] w-full gap-2"
                             style={{ alignItems: 'start' }}
@@ -150,8 +149,6 @@ export default function NavBar() {
                             </p>
                             <p style={{ marginLeft: '1em' }}>{item.precio * item.quantity}€</p>
                           </div>
-
-                          {/* Bloque de los botones */}
                           <div
                             className="flex"
                             style={{
