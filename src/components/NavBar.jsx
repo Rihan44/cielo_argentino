@@ -59,8 +59,8 @@ export default function NavBar() {
               </NavLink>
               <NavLink className={({ isActive }) =>
                 isActive ? 'isActive' : 'isNotActive'
-              } to='/contacto'>
-              Contacto
+              } to='/mi_perfil'>
+              Mi perfíl
               </NavLink>
             </Box>
           </Box>
@@ -126,11 +126,11 @@ export default function NavBar() {
             <Divider />
             {
               cartItems.length === 0 ? <p style={{padding: '1em'}}>No hay productos aún...</p>
-              : <MenuItem>
+              : <MenuItem  style={{padding: '10px', paddingLeft: '10px'}}>
                   <ul>
                   {
                     cartItems.map((item) => (
-                        <li key={item.id + item.quantity} style={{padding: '0'}}>
+                        <li key={item.id + item.quantity}>
                           <div className='flex flex-col' style={{marginTop:'0.8em'}}>
                             <div className='flex w-full justify-between'>
                             {/* TODO ESTO SI EL NOMBRE ES MUY LARGO ACORTARLO O QUE SALTE A LÑA SIGUIENET LINEA */}
