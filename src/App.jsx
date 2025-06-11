@@ -3,6 +3,7 @@ import NavBar from './components/NavBar.jsx'
 import Home from './pages/Home.jsx'
 import Carta from './pages/Carta.jsx'
 import Footer from './components/Footer.jsx';
+import Carrito from './pages/Carrito.jsx';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/carta" element={<Carta />} />
+          <Route path="/carrito" element={<Carrito />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <Footer/>

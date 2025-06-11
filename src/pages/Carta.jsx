@@ -196,7 +196,7 @@ export default function Carta() {
                   <div>
                     <Button disabled={pasta === ''} variant="contained" style={{backgroundColor: 'var(--color-marron-oscuro)', marginTop: '1em'}} onClick={() => dispatch(addToCart({
                       id: salsa.nombre ? item.id  + pasta.nombre + salsa.nombre : item.id + pasta.nombre,
-                      nombre: salsa.nombre ? `Pasta €{pasta.nombre} con €{salsa.nombre} ` : 'Pasta ' + pasta.nombre,
+                      nombre: salsa.nombre ? `Pasta ${pasta.nombre} con ${salsa.nombre} ` : 'Pasta ' + pasta.nombre,
                       precio: salsa.precio ? pasta.precio + salsa.precio : pasta.precio
                     }))}>Añadir al carrito</Button>
                   </div>
