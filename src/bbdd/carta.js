@@ -8,17 +8,68 @@ const carta = [
     precioMedia: 8,
     precioDocena: 16,
     imagen: "/images/empanadas1.jpg",
+    // TODO AGREGAR TIPO DE EMPANADA
     categoria: "salado",
-    type: 2
+    type: 2,
+    // is_multiple: true,
   },
   {
     id: 2,
     nombre: "Pasta casera",
     descripcion: "Pasta casera de cualquier tipo con la salsa que tu quieras",
-    precio: 9.5,
-    imagen: "/images/pasta.jpg",
+    // TODO METER IMAGENES DE PASTAS 
+    imagen: ["/images/pasta1.jpg", "/images/pasta2.jpg", "/images/pasta3.jpg", "/images/pasta4.jpg"],
     categoria: "salado",
-    type: 1
+    type: 1,
+    is_multiple: true,
+    multiple_select: [
+      {
+        nombre: 'Ravioli',
+        descripcion: "Pasta casera de cualquier tipo con la salsa que tu quieras",
+        precio: 5,
+        imagen: "/images/pasta1.jpg"
+      },
+      {
+        nombre: 'Cannelloni ',
+        descripcion: "Pasta casera de cualquier tipo con la salsa que tu quieras",
+        precio: 5,
+        imagen: "/images/pasta2.jpg"
+      },
+      {
+        nombre: 'Fettuccine ',
+        descripcion: "Pasta casera de cualquier tipo con la salsa que tu quieras",
+        precio: 5,
+        imagen: "/images/pasta3.jpg"
+      },
+      {
+        nombre: 'Gnocchi',
+        descripcion: "Pasta casera de cualquier tipo con la salsa que tu quieras",
+        precio: 5,
+        imagen: "/images/pasta4.jpg"
+      }
+    ],
+    salsa_type: [
+      {
+        nombre: 'Salsa parisien',
+        descripcion: "Pasta casera de cualquier tipo con la salsa que tu quieras",
+        precio: 2.5,
+      },
+      {
+        nombre: 'Salsa boloñesa',
+        descripcion: "Pasta casera de cualquier tipo con la salsa que tu quieras",
+        precio: 2.5,
+      },
+      {
+        nombre: 'Salsa carbonara',
+        descripcion: "Pasta casera de cualquier tipo con la salsa que tu quieras",
+        precio: 2.5,
+      },
+      {
+        nombre: 'Salsa pesto',
+        descripcion: "Pasta casera de cualquier tipo con la salsa que tu quieras",
+        precio: 2.5,
+      }
+    ]
   },
   {
     id: 3,
@@ -27,7 +78,8 @@ const carta = [
     precio: 5.0,
     imagen: "/images/milanesa.jpg",
     categoria: "salado",
-    type: 1
+    type: 1,
+    is_multiple: false,
   },
   {
     id: 4,
@@ -36,7 +88,8 @@ const carta = [
     precio: 8.0,
     imagen: "/images/locro.jpg",
     categoria: "salado",
-    type: 1
+    type: 1,
+    is_multiple: false,
   },
   {
     id: 6,
@@ -46,7 +99,8 @@ const carta = [
     precioDocena: 12,
     imagen: "/images/alfajores.jpg",
     categoria: "dulce",
-    type: 2
+    type: 2,
+    is_multiple: false,
   },
   {
     id: 7,
@@ -56,7 +110,8 @@ const carta = [
     precioDocena: 12,
     imagen: "/images/facturas.jpg",
     categoria: "dulce",
-    type: 2
+    type: 2,
+    is_multiple: false,
   },
   {
     id: 8,
@@ -65,7 +120,8 @@ const carta = [
     precio: 2.0,
     imagen: "/images/pasta_frola.jpg",
     categoria: "dulce",
-    type: 1
+    type: 1,
+    is_multiple: false,
   },
   {
     id: 9,
@@ -75,7 +131,8 @@ const carta = [
     precioDocena: 12,
     imagen: "/images/pepas.jpg",
     categoria: "dulce",
-    type: 2
+    type: 2,
+    is_multiple: false,
   }
 ];
 

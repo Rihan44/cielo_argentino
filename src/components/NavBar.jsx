@@ -130,12 +130,13 @@ export default function NavBar() {
                   <ul>
                   {
                     cartItems.map((item) => (
-                        <li key={item.id + item.quantity}>
+                        <li key={item.id + item.quantity} style={{padding: '0'}}>
                           <div className='flex flex-col' style={{marginTop:'0.8em'}}>
                             <div className='flex w-full justify-between'>
+                            {/* TODO ESTO SI EL NOMBRE ES MUY LARGO ACORTARLO O QUE SALTE A LÑA SIGUIENET LINEA */}
                               <p style={{textDecoration: 'underline', fontWeight: 'bold'}}>{item.nombre}</p>
                               {/* TODO PENDIENTE HACER ESTO MEJOR */}
-                              <p style={{marginLeft: '1em'}}>{ '-' + '  ' + item.precio * item.quantity}€</p>
+                              <p style={{marginLeft: '1em'}}>{item.precio * item.quantity}€</p>
                             </div>
                             <div className='flex' style={{alignSelf: 'end', alignItems: 'center', marginTop: '0.5em', backgroundColor: 'var(--color-dorado)', borderRadius: '5px', padding: '2px 8px'}}>
                             {/* TOPDO HACER UN METODO QUE CUANDO AÑADE O QUITE SE AÑADA O QUITE DEL CARRITO */}
