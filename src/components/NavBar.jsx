@@ -9,7 +9,6 @@ import Tooltip from '@mui/material/Tooltip';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import Divider from '@mui/material/Divider';
-import ListItemIcon from '@mui/material/ListItemIcon';
 import { IoMdAdd } from "react-icons/io";
 import { FiMinus } from "react-icons/fi";
 
@@ -129,13 +128,13 @@ export default function NavBar() {
             {
               cartItems.length === 0 ? <p style={{padding: '1em'}}>No hay productos aún...</p>
               : <MenuItem>
-                  <ul>
+                  <ul style={{width: '100%'}}>
                     {cartItems.map((item) => (
                       <li key={item.id + item.quantity}>
                         <div className="flex flex-col" style={{ marginTop: '0.8em' }}>
                           <div
                             className="grid grid-cols-[1fr_auto] w-full gap-2"
-                            style={{ alignItems: 'start' }}
+                            style={{ alignItems: 'start', margin:'0.4em 0 0.4em 0'}}
                           >
                             <p
                               style={{
@@ -183,9 +182,10 @@ export default function NavBar() {
                 </MenuItem>
             }
             <Divider />
-            <MenuItem sx={{display: 'flex', justifyContent: 'end', fontWeight: 'bold', paddingTop: '0'}}>
-              Total: {totalCartPrice}€
-            </MenuItem>
+            <div className='flex' style={{flexDirection: 'column', wordBreak: 'break-word',fontWeight: 'bold', padding: '0.8em 1em 0.5em 1em'}}>
+              <p style={{fontSize: '0.7em', fontStyle: 'italic'}}>*Los envíos a Ciudad Real llevan un cargo de  <strong style={{fontSize: '1em'}}> 5 EUROS</strong>, perdón por las molestias.</p>
+              <p style={{marginTop: '1em', alignSelf: 'end'}}>Total: {totalCartPrice} €</p>  
+            </div>
             <div className='w-full text-center' style={{padding: '0 0.5em 0.5em 0.5em'}}>
               <Link to='/carrito' onClick={handleClose}>
                 <Button variant="contained" style={{backgroundColor: 'var(--color-marron-oscuro)'}}>Ver carrito</Button>

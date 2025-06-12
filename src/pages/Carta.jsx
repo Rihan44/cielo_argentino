@@ -138,7 +138,10 @@ export default function Carta() {
                   }
                 <div className="flex flex-col items-center" style={{padding: '1em'}}>
                   <h3 className="text-xl font-semibold" style={{margin: '0 0 0.5em 0'}}>{item.nombre}</h3>
-                  <p className="text-gray-600 text-sm text-center">{item.descripcion}</p>
+                  <p className="text-gray-600 text-sm text-center">
+                    {/* {item.descripcion} */}
+                    TODO HACER QUE LA DESCRIPCIÓN CAMBIE SEGÚN LA PASTA Y LA SALSA
+                  </p>
                   <div style={{marginTop: '1em', width: '100%', textAlign: 'center'}}>
                     <FormControl sx={{ m: 1, width: '90%' }}>
                       <InputLabel id="demo-controlled-open-select-label">Tipo de pasta</InputLabel>

@@ -3,8 +3,8 @@
 const carta = [
   {
     id: 1,
-    nombre: "Empanadas de Carne",
-    descripcion: "Empanada tradicional con carne picada, cebolla, huevo y especias.",
+    nombre: "Empanadas",
+    descripcion: "Empanada tradicionales de...",
     precioMedia: 8,
     precioDocena: 16,
     imagen: "/images/empanadas1.jpg",
@@ -12,6 +12,32 @@ const carta = [
     categoria: "salado",
     type: 2,
     // is_multiple: true,
+    multiple_select: [
+      {
+        nombre: 'Ravioli',
+        descripcion: "Pasta casera de cualquier tipo con la salsa que tu quieras",
+        precio: 5,
+        imagen: "/images/pasta1.jpg"
+      },
+      {
+        nombre: 'Cannelloni ',
+        descripcion: "Pasta casera de cualquier tipo con la salsa que tu quieras",
+        precio: 5,
+        imagen: "/images/pasta2.jpg"
+      },
+      {
+        nombre: 'Fettuccine ',
+        descripcion: "Pasta casera de cualquier tipo con la salsa que tu quieras",
+        precio: 5,
+        imagen: "/images/pasta3.jpg"
+      },
+      {
+        nombre: 'Gnocchi',
+        descripcion: "Pasta casera de cualquier tipo con la salsa que tu quieras",
+        precio: 5,
+        imagen: "/images/pasta4.jpg"
+      }
+    ],
   },
   {
     id: 2,
