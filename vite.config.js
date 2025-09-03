@@ -9,6 +9,9 @@ export default defineConfig({
       '@mui/styled-engine': '@mui/styled-engine-sc',
     },
   },
+  server: {
+    host: '0.0.0.0'
+  },
   optimizeDeps: {
     include: [
       'react',

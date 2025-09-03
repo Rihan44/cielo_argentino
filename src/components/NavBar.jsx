@@ -18,8 +18,8 @@ import { useEffect, useState } from 'react';
 import { addToCart, minusItem } from "../store/cart";
 
 export default function NavBar() {
- const location = useLocation();
- const [anchorEl, setAnchorEl] = useState(null);
+  const location = useLocation();
+  const [anchorEl, setAnchorEl] = useState(null);
   const dispatch = useDispatch();
 
   const open = Boolean(anchorEl);
@@ -62,7 +62,7 @@ export default function NavBar() {
               <NavLink className={({ isActive }) =>
                 isActive ? 'isActive' : 'isNotActive'
               } to='/mi_perfil'>
-              Mi perfil
+              Contacto
               </NavLink>
             </Box>
           </Box>
@@ -186,7 +186,7 @@ export default function NavBar() {
               <p style={{fontSize: '0.7em', fontStyle: 'italic'}}>*Los envíos a Ciudad Real llevan un cargo de  <strong style={{fontSize: '1em'}}> 5 EUROS</strong>, perdón por las molestias.</p>
               <p style={{marginTop: '1em', alignSelf: 'end'}}>Total: {totalCartPrice} €</p>  
             </div>
-            <div className='w-full text-center' style={{padding: '0 0.5em 0.5em 0.5em'}}>
+            <div className='w-full text-center flex' style={{padding: '0 0.5em 0.5em 0.5em', justifyContent: 'end'}}>
               <Link to='/carrito' onClick={handleClose}>
                 <Button variant="contained" style={{backgroundColor: 'var(--color-marron-oscuro)'}}>Ver carrito</Button>
               </Link>

@@ -21,7 +21,7 @@ export default function Home() {
         En <i>Cielo Argentino</i> traemos a España el auténtico sabor de nuestra tierra. Elaboramos comida argentina casera con ingredientes de calidad y recetas tradicionales: empanadas, milanesas, alfajores, facturas, dulce de leche y mucho más.
         Ya sea que extrañes los sabores de casa o quieras descubrir lo mejor de nuestra cocina, aquí encontrarás un pedacito de Argentina, hecho con amor.
       </p>
-      <div className="w-full max-w-4xl mx-auto">
+      <div className="w-full mx-auto">
         <Swiper
           modules={[Autoplay, Pagination]}
           spaceBetween={0}
@@ -33,7 +33,7 @@ export default function Home() {
         >
           {images.map((src, index) => (
             <SwiperSlide key={index}>
-            <div className="relative h-[300px] w-full overflow-hidden shadow-lg">
+            <div className="relative h-[300px] md:h-[500px] w-full overflow-hidden shadow-lg">
               <img
                 src={src}
                 alt={`Slide ${index}`}

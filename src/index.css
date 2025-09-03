@@ -121,6 +121,12 @@ footer {
   font-family: var(--font-secundaria);
   background-color: var(--color-marron-oscuro);
   font-size: 0.7em;
+  margin-top: 2em;
 }
 
+@media (min-width: 1024px) {
+  footer {
+      margin-top: 5.3em;
+  }
+}
 
